@@ -8,7 +8,6 @@ import { ThemeContext } from './Contexts/ThemeContext'
 class Main extends Component {
   static contextType = ThemeContext
   render() {
-    console.log(this.context)
     const { classes } = this.props
     return (
       <div

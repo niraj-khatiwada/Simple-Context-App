@@ -31,7 +31,7 @@ class NavBar extends Component {
                   Context App
                 </Typography>
               </div>
-              <div className={classes.toggleGrid}>
+              <div c    lassName={classes.toggleGrid}>
                 <Typography variant="h6" color="inherit">
                   Theme
                 </Typography>
