@@ -33,8 +33,8 @@ class Form extends Component {
           </Avatar>
           <Typography variant="h5"></Typography>
           <Select
-            defaultValue="english"
-            onClick={(evt) => changeLanguage(evt.target.value)}
+            value={languageName}
+            onChange={(evt) => changeLanguage(evt.target.value)}
           >
             <MenuItem value="english">English</MenuItem>
             <MenuItem value="french">French</MenuItem>
