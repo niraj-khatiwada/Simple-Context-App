@@ -4,14 +4,17 @@ import './App.css'
 import Main from './Main'
 import Form from './Form'
 import NavBar from './NavBar'
+import { ThemeProvider } from './Contexts/ThemeContext'
 
 function App() {
   return (
     <div className="App">
-      <Main>
-        <NavBar />
-        <Form />
-      </Main>
+      <ThemeProvider>
+        <Main>
+          <NavBar />
+          <Form />
+        </Main>
+      </ThemeProvider>
     </div>
   )
 }

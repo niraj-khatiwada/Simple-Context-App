@@ -10,12 +10,20 @@ import Switch from '@material-ui/core/Switch'
 
 import styles from './Styles/NavBarStyles'
 
+import { ThemeContext } from './Contexts/ThemeContext'
+
 class NavBar extends Component {
+  static contextType = ThemeContext
   render() {
+    const { isDark, toggleTheme } = this.context
     const { classes } = this.props
     return (
       <div className={classes.root}>
-        <AppBar className={classes.navBar} position="static">
+        <AppBar
+          className={classes.navBar}
+          position="static"
+          color={isDark ? 'primary' : 'white'}
+        >
           <Toolbar>
             <div className={classes.toolBarFlex}>
               <div className={classes.title}>
@@ -27,7 +35,7 @@ class NavBar extends Component {
                 <Typography variant="h6" color="inherit">
                   Theme
                 </Typography>
-                <Switch />
+                <Switch onChange={() => toggleTheme()} />
               </div>
               <div className={classes.search}>
                 <SearchIcon />
@@ -36,7 +44,6 @@ class NavBar extends Component {
                   type="text"
                   inputProps={{ className: classes.searchInput }}
                   fullWidth
-                  
                 />
               </div>
             </div>
