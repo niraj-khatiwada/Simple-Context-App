@@ -9,7 +9,6 @@ const styles = (theme) => ({
     },
   },
   searchInput: {
-    color: 'white',
     borderBottom: '2px solid white',
     opacity: 0.5,
     '&:focus': {
@@ -17,6 +16,7 @@ const styles = (theme) => ({
     },
     transition: theme.transitions.create('opacity'),
   },
+
   toolBarFlex: {
     width: '100%',
     display: 'flex',

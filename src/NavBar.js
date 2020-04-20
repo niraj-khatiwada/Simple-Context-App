@@ -11,12 +11,14 @@ import Switch from '@material-ui/core/Switch'
 import styles from './Styles/NavBarStyles'
 
 import { ThemeContext } from './Contexts/ThemeContext'
+import { withLanguageContext } from './Contexts/LanguageContext'
 
 class NavBar extends Component {
   static contextType = ThemeContext
   render() {
     const { isDark, toggleTheme } = this.context
-    const { classes } = this.props
+    const { classes, languageContext } = this.props
+    console.log(this.props)
     return (
       <div className={classes.root}>
         <AppBar
@@ -31,13 +33,13 @@ class NavBar extends Component {
                   Context App
                 </Typography>
               </div>
-              <div c    lassName={classes.toggleGrid}>
+              <div className={classes.toggleGrid}>
                 <Typography variant="h6" color="inherit">
                   Theme
                 </Typography>
                 <Switch onChange={() => toggleTheme()} />
               </div>
-              <div className={classes.search}>
+              <div className={`${classes.search}`}>
                 <SearchIcon />
                 <TextField
                   placeholder="Search"
@@ -53,4 +55,4 @@ class NavBar extends Component {
     )
   }
 }
-export default withStyles(styles)(NavBar)
+export default withLanguageContext(withStyles(styles)(NavBar))
