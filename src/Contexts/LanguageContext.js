@@ -2,7 +2,7 @@ import React, { createContext, useState } from 'react'
 
 export const LanguageContext = createContext()
 
-export default function useLanguageProvider(props) {
+export default function LanguageProvider(props) {
   const [languageCurrState, setLanguageState] = useState('english')
   const handlechangeLanguage = (language) => {
     setLanguageState(language)

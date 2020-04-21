@@ -4,7 +4,7 @@ import './App.css'
 import Main from './Main'
 import Form from './Form'
 import NavBar from './NavBar'
-import { ThemeProvider } from './Contexts/ThemeContext'
+import ThemeProvider from './Contexts/ThemeContext'
 import LanguageProvider from './Contexts/LanguageContext'
 
 function App() {
