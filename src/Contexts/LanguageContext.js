@@ -1,17 +1,17 @@
-import React, { createContext, useState } from 'react'
+import React, { createContext } from 'react'
+
+import useLanguageHooks from '../Hooks/useLanguageHooks'
 
 export const LanguageContext = createContext()
 
 export default function LanguageProvider(props) {
-  const [languageCurrState, setLanguageState] = useState('english')
-  const handlechangeLanguage = (language) => {
-    setLanguageState(language)
-  }
+  const [language, setLanguage] = useLanguageHooks('english')
+
   return (
     <LanguageContext.Provider
       value={{
-        languageName: languageCurrState,
-        changeLanguage: handlechangeLanguage,
+        languageName: language,
+        changeLanguage: setLanguage,
       }}
     >
       {props.children}

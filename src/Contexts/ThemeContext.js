@@ -6,7 +6,9 @@ export const ThemeContext = createContext()
 export default function ThemeProvider(props) {
   const [isDarkState, setDarkState] = useToggle()
   return (
-    <ThemeContext.Provider value={{ isDark: isDarkState, setDarkState }}>
+    <ThemeContext.Provider
+      value={{ isDark: isDarkState, toggleTheme: setDarkState }}
+    >
       {props.children}
     </ThemeContext.Provider>
   )
