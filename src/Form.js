@@ -16,7 +16,7 @@ import styles from './Styles/FormStyles'
 
 import { LanguageContext } from './Contexts/LanguageContext'
 
-import languageData from './LanguageData'
+import languageData from './LanguageData/LanguageData'
 
 function Form(props) {
   const { classes } = props

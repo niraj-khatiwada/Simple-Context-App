@@ -10,7 +10,7 @@ import Switch from '@material-ui/core/Switch'
 
 import styles from './Styles/NavBarStyles'
 
-import languageData from './NavBarLanguageData'
+import languageData from './LanguageData/NavBarLanguageData'
 
 import { ThemeContext } from './Contexts/ThemeContext'
 import { LanguageContext } from './Contexts/LanguageContext'
