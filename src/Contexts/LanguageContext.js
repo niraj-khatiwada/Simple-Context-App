@@ -20,8 +20,8 @@ export default class LanguageProvider extends Component {
   }
 }
 
-export const withLanguageContext = (MyComponent) => (props) => (
-  <LanguageContext.Consumer>
-    {(value) => <MyComponent languageContext={value} {...props} />}
-  </LanguageContext.Consumer>
-)
+// export const withLanguageContext = (MyComponent) => (props) => (
+//   <LanguageContext.Consumer>
+//     {(value) => <MyComponent languageContext={value} {...props} />}
+//   </LanguageContext.Consumer>
+// )
